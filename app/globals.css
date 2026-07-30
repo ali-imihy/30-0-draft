@@ -20,7 +20,98 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #050505;
+  color: white;
+  font-family: system-ui, sans-serif;
+}
+
+.font-deadlock {
+  font-family: var(--font-deadlock), system-ui, sans-serif;
+}
+
+:root {
+  --deadlock-green: #00ff7a;
+  --deadlock-green-soft: rgba(0, 255, 122, 0.16);
+  --deadlock-green-border: rgba(0, 255, 122, 0.45);
+  --deadlock-green-glow: rgba(0, 255, 122, 0.75);
+}
+
+.neon-text {
+  color: var(--deadlock-green);
+  text-shadow:
+    0 0 6px var(--deadlock-green-glow),
+    0 0 18px rgba(0, 255, 122, 0.5),
+    0 0 32px rgba(0, 255, 122, 0.25);
+}
+
+.neon-text-soft {
+  color: var(--deadlock-green);
+  text-shadow:
+    0 0 5px rgba(0, 255, 122, 0.45),
+    0 0 14px rgba(0, 255, 122, 0.25);
+}
+
+.neon-border {
+  border-color: var(--deadlock-green-border);
+  box-shadow:
+    0 0 12px rgba(0, 255, 122, 0.18),
+    inset 0 0 12px rgba(0, 255, 122, 0.08);
+}
+
+.neon-chip {
+  border-color: rgba(0, 255, 122, 0.35);
+  background: rgba(0, 255, 122, 0.08);
+  color: var(--deadlock-green);
+}
+
+.neon-hover {
+  transition:
+    color 150ms ease,
+    text-shadow 150ms ease,
+    border-color 150ms ease,
+    background-color 150ms ease;
+}
+
+.group:hover .neon-hover {
+  color: var(--deadlock-green);
+  text-shadow:
+    0 0 5px rgba(0, 255, 122, 0.5),
+    0 0 14px rgba(0, 255, 122, 0.25);
+}
+
+.deadlock-bg {
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.deadlock-bg::before,
+.deadlock-bg::after {
+  content: "";
+  position: fixed;
+  top: -20vh;
+  width: 340px;
+  height: 160vh;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.deadlock-bg::before {
+  left: -160px;
+  background: radial-gradient(
+    ellipse at left center,
+    rgba(0, 255, 122, 0.22),
+    rgba(0, 255, 122, 0.1) 35%,
+    transparent 72%
+  );
+}
+
+.deadlock-bg::after {
+  right: -120px;
+  background: radial-gradient(
+    ellipse at right center,
+    rgba(0, 255, 122, 0.18),
+    rgba(0, 255, 122, 0.08) 35%,
+    transparent 72%
+  );
 }
