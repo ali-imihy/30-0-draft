@@ -31,7 +31,7 @@ const ARCHETYPES: Archetype[] = [
     bonus: ["CC", "finisher", "dueling"],
   },
   {
-    name: "Gun Carry",
+    name: "Gun/Spirit Carry",
     core: ["pressure", "scaling", "dueling"],
     bonus: ["mobility", "sustain", "escape", "poke"],
   },

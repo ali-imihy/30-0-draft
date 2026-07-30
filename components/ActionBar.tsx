@@ -42,26 +42,6 @@ export default function ActionBar({
       >
         Skip: {state.skipsLeft}
       </button>
-
-      {state.phase === "swapping" ? (
-        <button
-          type="button"
-          disabled={disabled}
-          onClick={() => dispatch({ type: "CANCEL_SWAP" })}
-          className="rounded-xl border border-neutral-700 px-4 py-3 font-semibold disabled:cursor-not-allowed disabled:opacity-40"
-        >
-          Cancel swap
-        </button>
-      ) : (
-        <button
-          type="button"
-          disabled={!canSwap}
-          onClick={() => dispatch({ type: "ENTER_SWAP_MODE" })}
-          className="rounded-xl border border-neutral-700 px-4 py-3 font-semibold disabled:cursor-not-allowed disabled:opacity-40"
-        >
-          Swap: {state.swapsLeft}
-        </button>
-      )}
     </section>
   );
 }

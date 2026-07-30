@@ -8,13 +8,20 @@ import ActionBar from "./ActionBar";
 import ResultPanel from "./ResultPanel";
 import Header from "./Header";
 import { useReducer, useState } from "react";
+import { scoreBuild } from "@/lib/scoring";
 
 export default function DraftGame() {
   const [state, dispatch] = useReducer(draftReducer, initialDraftState);
   const [isRolling, setIsRolling] = useState(false);
 
   if (state.phase === "result") {
-    return <ResultPanel state={state} dispatch={dispatch} />;
+    return (
+      <ResultPanel
+        build={state.build}
+        result={scoreBuild(state.build)}
+        dispatch={dispatch}
+      />
+    );
   }
 
   return (

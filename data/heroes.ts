@@ -177,7 +177,7 @@ export const heroes: Hero[] = [
       imageSrc: "/heroes/Dynamo.png",
     },
     stats: {
-      name: "2nd Tier Bullet Sponge",
+      name: "Tanky Supporter",
       description: "High health, medium mobility",
       rating: 6,
       tags: [],
