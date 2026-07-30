@@ -89,7 +89,7 @@ export default function HeroRollCard({
         />
       ) : (
         <div className="flex gap-4">
-          <div className="relative h-32 w-32 shrink-0 overflow-hidden rounded-xl border border-neutral-800 bg-neutral-900">
+          <div className="relative h-32 w-32 shrink-0 overflow-hidden rounded-xl">
             <Image
               src={currentHero.imageSrc}
               alt={currentHero.name}

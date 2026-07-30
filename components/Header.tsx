@@ -9,7 +9,7 @@ export default function Header() {
       </div>
 
       <p className="max-w-xl text-sm text-neutral-400">
-        Draft a character from different hero abilities.
+        Draft abilities from random Deadlock heroes and try to go 30-0!
       </p>
     </header>
   );
