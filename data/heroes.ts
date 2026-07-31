@@ -1330,7 +1330,7 @@ export const heroes: Hero[] = [
     },
   }),
   
-  makeHero("mirage", "Mirage", "/heroes/Mirage.png", "/hero-names/Mirage_name.svg", {
+  makeHero("mirage", "Mirage", "/heroes/Mirage.png", "/heronames/Mirage_name.svg", {
     ability1: {
       name: "Fire Scarabs",
       description:
