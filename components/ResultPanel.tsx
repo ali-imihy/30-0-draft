@@ -40,6 +40,7 @@ export default function ResultPanel({
 
         <h2 className="font-deadlock neon-text mt-2 text-6xl font-black tracking-wide md:text-7xl">
           {result.record}
+          I love you so much baby
         </h2>
 
         <p className="mt-2 text-sm text-neutral-400">
